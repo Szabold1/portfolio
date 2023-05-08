@@ -20,8 +20,8 @@ body {
 /* *************************** */
 /********* BACKGROUND **********/
 .background {
-  background: linear-gradient(110deg, #eeffb2, #b6ffe4, #d1c8ff);
-  background-size: 250% 250%;
+  background: linear-gradient(45deg, #eeffb2, #b6ffe4, #d1c8ff);
+  background-size: 200% 200%;
   animation: gradient 12s alternate infinite;
   height: 100%;
   width: 100%;
@@ -167,15 +167,17 @@ h2 {
 }
 .contact .btn-contact {
   background-color: #1d595e;
-  color: #ffffff;
+  color: #d5e2e3;
   transition: all 0.25s;
 }
 .contact .btn-contact:hover {
   background-color: #236b71;
+  color: white;
   cursor: pointer;
 }
 .contact .btn-contact:active {
   background-color: #17474b;
+  color: #a7c2c4;
 }
 .contact label {
   display: block;
