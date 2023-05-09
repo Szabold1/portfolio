@@ -186,6 +186,9 @@ h2 {
   display: block;
   margin-left: 1.2rem;
 }
+.contact .contact-image {
+  display: none;
+}
 
 /* **************************** */
 /************ FOOTER ************/
@@ -252,6 +255,13 @@ footer a:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0 0.2rem 1rem;
     backdrop-filter: blur(20px) saturate(1.5);
     -webkit-backdrop-filter: blur(20px) saturate(1.5);
+    overflow: hidden;
+  }
+  .contact form {
+    padding-right: 2rem;
+  }
+  .contact .contact-image {
+    background-color: rgba(204, 231, 224, 0.5);
   }
   .contact input,
   .contact textarea {
@@ -327,11 +337,32 @@ footer a:hover {
   .projects {
     grid-template-columns: 1fr 1fr;
   }
+  .contact form {
+    width: 60%;
+  }
+  .contact .contact-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 40%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .contact .contact-image img {
+    width: 75%;
+    height: 75%;
+    opacity: 0.9;
+  }
 }
 /* Screen over 1000px */
 @media (min-width: 1000px) {
   .about-image {
     width: 68%;
+  }
+  .contact {
+    padding: 2rem;
   }
 }
 /* Screen over 1300px */

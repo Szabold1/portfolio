@@ -208,6 +208,10 @@ h2 {
     display: block;
     margin-left: 1.2rem;
   }
+
+  .contact-image {
+    display: none;
+  }
 }
 
 /* **************************** */
@@ -271,6 +275,15 @@ footer {
 
   .contact {
     @include box($color-bg-dark);
+    overflow: hidden;
+
+    form {
+      padding-right: 2rem;
+    }
+
+    .contact-image {
+      background-color: rgba($color-light1, 0.5);
+    }
 
     input,
     textarea {
@@ -370,12 +383,39 @@ footer {
   .projects {
     grid-template-columns: 1fr 1fr;
   }
+
+  .contact {
+    form {
+      width: 60%;
+    }
+
+    .contact-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 40%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      img {
+        width: 75%;
+        height: 75%;
+        opacity: 0.9;
+      }
+    }
+  }
 }
 
 /* Screen over 1000px */
 @media (min-width: 1000px) {
   .about-image {
     width: 68%;
+  }
+
+  .contact {
+    padding: 2rem;
   }
 }
 
