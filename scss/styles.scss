@@ -1,6 +1,7 @@
 $color-dark1: #1d595e;
-$color-light1: #d5e2e3;
+$color-light1: #cce7e0;
 $color-bg: #ffffff;
+$color-bg-dark: #222;
 
 $h1-size: clamp(3.2rem, 10vw, 6rem);
 $h2-size: clamp(2.2rem, 8vw, 3.5rem);
@@ -181,6 +182,8 @@ h2 {
     border-radius: 0.8rem;
     width: 100%;
     margin-top: 0.4rem;
+    background-color: rgba($color-bg, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0.1rem 0.6rem;
   }
 
   .btn-contact {
@@ -226,6 +229,82 @@ footer {
 }
 
 /* **************************** */
+/********** DARK MODE **********/
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $color-light1;
+  }
+
+  .background {
+    background: linear-gradient(45deg, #7c9131, #2b916b, #3b2999);
+    background-size: 200% 200%;
+  }
+
+  img {
+    filter: brightness(0.9);
+  }
+
+  header {
+    nav {
+      ul {
+        @include bg-blur($color-bg-dark);
+        li {
+          &:hover {
+            background-color: rgba($color-bg-dark, 0.4);
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    @include box($color-bg-dark);
+  }
+
+  .projects {
+    .project {
+      @include box($color-bg-dark);
+    }
+  }
+
+  .contact {
+    @include box($color-bg-dark);
+
+    input,
+    textarea {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $color-light1;
+    }
+
+    .btn-contact {
+      background-color: rgba($color-light1, 0.75);
+      color: $color-dark1;
+
+      &:hover {
+        background-color: $color-light1;
+        color: lighten($color-dark1, 10%);
+      }
+
+      &:active {
+        background-color: rgba($color-light1, 0.75);
+        color: $color-dark1;
+      }
+    }
+  }
+
+  footer {
+    a {
+      color: $color-light1;
+
+      &:hover {
+        color: lighten($color-light1, 15%);
+      }
+    }
+  }
+}
+
+/* **************************** */
 /********** RESPONSIVE **********/
 
 /* Screen over 480px */
@@ -243,6 +322,10 @@ footer {
 
 /* Screen over 600px */
 @media (min-width: 600px) {
+  .container {
+    padding: 0 2.2rem;
+  }
+
   .about {
     padding: 2rem 3.6rem;
   }
@@ -267,7 +350,7 @@ footer {
 /* Screen over 800px */
 @media (min-width: 800px) {
   .about {
-    padding: 1.6rem 2.6rem;
+    padding: 1.6rem 2.4rem;
     flex-direction: row;
   }
 
@@ -292,5 +375,16 @@ footer {
 @media (min-width: 1000px) {
   .about-image {
     width: 68%;
+
+    img {
+      padding: 0.4rem;
+    }
+  }
+}
+
+/* Screen over 1300px */
+@media (min-width: 1300px) {
+  .container {
+    padding: 0;
   }
 }
