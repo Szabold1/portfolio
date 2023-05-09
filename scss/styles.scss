@@ -141,6 +141,7 @@ h2 {
     margin: 0.5rem auto 1.5rem;
     width: 80%;
     border-radius: 40rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0.2rem 2rem;
   }
 }
 
@@ -375,10 +376,6 @@ footer {
 @media (min-width: 1000px) {
   .about-image {
     width: 68%;
-
-    img {
-      padding: 0.4rem;
-    }
   }
 }
 
@@ -386,5 +383,9 @@ footer {
 @media (min-width: 1300px) {
   .container {
     padding: 0;
+  }
+
+  .about-image {
+    width: 57%;
   }
 }

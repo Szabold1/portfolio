@@ -116,6 +116,7 @@ h2 {
   margin: 0.5rem auto 1.5rem;
   width: 80%;
   border-radius: 40rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0.2rem 2rem;
 }
 
 /* *************************** */
@@ -332,13 +333,13 @@ footer a:hover {
   .about-image {
     width: 68%;
   }
-  .about-image img {
-    padding: 0.4rem;
-  }
 }
 /* Screen over 1300px */
 @media (min-width: 1300px) {
   .container {
     padding: 0;
+  }
+  .about-image {
+    width: 57%;
   }
 }/*# sourceMappingURL=styles.css.map */
