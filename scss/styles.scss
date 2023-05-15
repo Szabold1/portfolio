@@ -28,6 +28,7 @@ body {
   color: $color-dark1;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
+  background-color: $color-light1;
 }
 
 .container {
@@ -239,6 +240,7 @@ footer {
 @media (prefers-color-scheme: dark) {
   body {
     color: $color-light1;
+    background-color: $color-dark1;
   }
 
   .background {
@@ -277,12 +279,9 @@ footer {
     @include box($color-bg-dark);
     overflow: hidden;
 
-    form {
-      padding-right: 2rem;
-    }
-
     .contact-image {
       background-color: rgba($color-light1, 0.5);
+      padding-right: 2rem;
     }
 
     input,
@@ -399,7 +398,7 @@ footer {
       height: 100%;
       position: absolute;
       top: 0;
-      right: 0;
+      right: -2rem;
 
       img {
         width: 75%;

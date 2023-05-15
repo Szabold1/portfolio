@@ -6,6 +6,7 @@ body {
   color: #1d595e;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
+  background-color: #cce7e0;
 }
 
 .container {
@@ -212,6 +213,7 @@ footer a:hover {
 @media (prefers-color-scheme: dark) {
   body {
     color: #cce7e0;
+    background-color: #1d595e;
   }
   .background {
     background: linear-gradient(45deg, #7c9131, #2b916b, #3b2999);
@@ -257,11 +259,9 @@ footer a:hover {
     -webkit-backdrop-filter: blur(20px) saturate(1.5);
     overflow: hidden;
   }
-  .contact form {
-    padding-right: 2rem;
-  }
   .contact .contact-image {
     background-color: rgba(204, 231, 224, 0.5);
+    padding-right: 2rem;
   }
   .contact input,
   .contact textarea {
@@ -351,7 +351,7 @@ footer a:hover {
     height: 100%;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -2rem;
   }
   .contact .contact-image img {
     width: 75%;
